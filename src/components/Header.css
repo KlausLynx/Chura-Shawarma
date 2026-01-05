@@ -1,0 +1,50 @@
+.gooey-wrapper {
+    filter: url('#goo');
+}
+
+.gooey-button {
+    position: relative;
+    cursor: pointer;
+    border: none;
+    /* Remove display: inline-block and min-width to let Tailwind handle it */
+}
+
+.gooey-button:before,
+.gooey-button:after {
+    width: 4.4em;
+    height: 2.95em;
+    position: absolute;
+    content: "";
+    display: inline-block;
+    border-radius: 50%;
+    transition: transform 1s ease;
+    transform: scale(0);
+    z-index: -1;
+}
+
+/* Orange button blobs */
+.gooey-button.bg-orange-400:before,
+.gooey-button.bg-orange-400:after {
+    background: rgb(251, 146, 60); /* orange-400 */
+}
+
+/* Red button blobs */
+.gooey-button.bg-red-600:before,
+.gooey-button.bg-red-600:after {
+    background: rgb(220, 38, 38); /* red-600 */
+}
+
+.gooey-button:before {
+    top: -25%;
+    left: 20%;
+}
+
+.gooey-button:after {
+    bottom: -25%;
+    right: 20%;
+}
+
+.gooey-button:hover:before,
+.gooey-button:hover:after {
+    transform: scale(1);
+}
