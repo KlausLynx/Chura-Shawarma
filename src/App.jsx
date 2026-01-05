@@ -1,17 +1,17 @@
 import React from 'react';
 import Layout from './components/Layout';
 import Home from './Home';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HashRouter, Routes, Route } from 'react-router-dom';
 
 const SuyaApp = () => {
     return (
-        <BrowserRouter>
+        <HashRouter>
             <Layout>
                 <Routes>
                     <Route path='/' element={<Home/>}/>        
                 </Routes>
             </Layout>
-        </BrowserRouter>
+        </HashRouter>
     )
 }
 
