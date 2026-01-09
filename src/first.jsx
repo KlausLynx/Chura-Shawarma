@@ -10,6 +10,7 @@ const SuyaWebApp = () => {
   const [cart, setCart] = useState([]);
   const [showCartModal, setShowCartModal] = useState(false);
   const menuRef = useRef(null);
+  const orderRef = useRef(null)
 
   const categories = ['all', 'beef', 'chicken', 'goat', 'combos', 'sides'];
 
@@ -92,7 +93,7 @@ const SuyaWebApp = () => {
       description: 'Sweet ripe plantains fried to golden perfection',
       spiceLevel: 0,
       popular: true,
-      image: 'https://images.unsplash.com/photo-1587334206799-c4e7f6c03b26?w=800&q=80'
+      image: 'https://images.unsplash.com/photo-1725013936336-0121addb2c53?w=800&q=80'
     },
     {
       id: 9,
@@ -161,7 +162,7 @@ const SuyaWebApp = () => {
   const whatsappNumber = "2347067179435";
 
   const sendWhatsAppOrder = () => {
-    let message = "🔥 *New Suya Order from Suya Spot HTX* 🔥%0A%0A";
+    let message = "🔥 *New Suya Order from Angel Flame HTX* 🔥%0A%0A";
     
     cart.forEach((item, index) => {
       message += `${index + 1}. ${item.name}%0A`;
@@ -170,7 +171,7 @@ const SuyaWebApp = () => {
     });
     
     message += `*Total: $${cartTotal.toFixed(2)}*%0A%0A`;
-    message += "Please confirm my order. Thank you! 🙏";
+    message += "Please confirm my order...Send your acct details for transaction... Thank you! 🙏";
     
     window.open(`https://wa.me/${whatsappNumber}?text=${message}`, '_blank');
   };
@@ -187,7 +188,7 @@ const SuyaWebApp = () => {
         <div 
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: `url(${heroImage})`,  // ✅ CORRECT - With {}
+            backgroundImage: `url(${heroImage})`,
             backgroundPosition: 'center'
           }}
         >
@@ -216,7 +217,7 @@ const SuyaWebApp = () => {
       </section>
 
       {/* Category Filter */}
-      <div className="bg-orange-400 shadow-md sticky top-0 z-40">
+      <div className="bg-orange-400 shadow-md sticky top-0 z-40" data-menu-section>
         <div className="container mx-auto px-4 py-3 sm:py-4">
           <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-3">
             <span className="text-xs sm:text-sm font-semibold text-gray-700">Filter:</span>
@@ -240,7 +241,7 @@ const SuyaWebApp = () => {
       </div>
 
       {/* Location Section */}
-      <section className="py-12 sm:py-16 lg:py-20">
+      <section id="order" ref={orderRef} className="py-12 sm:py-16 lg:py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-8 sm:mb-12">
             <span className="inline-block bg-red-600 text-white px-3 sm:px-4 py-2 rounded-full text-xs sm:text-sm font-bold mb-4">
@@ -254,7 +255,7 @@ const SuyaWebApp = () => {
             <div className="grid lg:grid-cols-2 gap-6 sm:gap-8">
               {/* Google Map */}
               <div className="bg-white p-3 sm:p-4 rounded-2xl shadow-2xl">
-                <div className="w-full rounded-xl overflow-hidden" style={{height: '300px'}}>
+                <div className="w-full rounded-xl overflow-hidden" style={{height: '560px'}}>
                   <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d221094.10623322314!2d-95.66907934179688!3d29.817178799999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8640b8b4488d8501%3A0xca0d02def365053b!2sHouston%2C%20TX!5e0!3m2!1sen!2sus!4v1234567890123!5m2!1sen!2sus"
                     width="100%"
@@ -271,7 +272,7 @@ const SuyaWebApp = () => {
               <div className="space-y-3 sm:space-y-4">
                 <div className="bg-white p-4 sm:p-6 lg:p-8 rounded-2xl shadow-lg border-l-4 border-red-600">
                   <div className="flex items-start gap-3 sm:gap-4">
-                    <div className="bg-red-100 p-2 sm:p-3 rounded-full flex-shrink-0">
+                    <div className="bg-red-100 p-2 sm:p-3 rounded-full shrink-0">
                       <MapPin className="w-5 h-5 sm:w-6 sm:h-6 lg:w-8 lg:h-8 text-red-600" />
                     </div>
                     <div>
@@ -284,7 +285,7 @@ const SuyaWebApp = () => {
 
                 <div className="bg-white p-4 sm:p-6 lg:p-8 rounded-2xl shadow-lg border-l-4 border-orange-600">
                   <div className="flex items-start gap-3 sm:gap-4">
-                    <div className="bg-orange-100 p-2 sm:p-3 rounded-full flex-shrink-0">
+                    <div className="bg-orange-100 p-2 sm:p-3 rounded-full shrink-0">
                       <Clock className="w-5 h-5 sm:w-6 sm:h-6 lg:w-8 lg:h-8 text-orange-600" />
                     </div>
                     <div>
@@ -297,7 +298,7 @@ const SuyaWebApp = () => {
 
                 <div className="bg-white p-4 sm:p-6 lg:p-8 rounded-2xl shadow-lg border-l-4 border-green-600">
                   <div className="flex items-start gap-3 sm:gap-4">
-                    <div className="bg-green-100 p-2 sm:p-3 rounded-full flex-shrink-0">
+                    <div className="bg-green-100 p-2 sm:p-3 rounded-full shrink-0">
                       <Phone className="w-5 h-5 sm:w-6 sm:h-6 lg:w-8 lg:h-8 text-green-600" />
                     </div>
                     <div className="flex-1 min-w-0">
@@ -326,8 +327,8 @@ const SuyaWebApp = () => {
         </div>
       </section>
 
-      {/* Menu Grid */}
-      <section ref={menuRef} className="container mx-auto px-4 py-8 sm:py-12 scroll-mt-20">
+      {/* Menu Grid - Added id="menu" for navigation */}
+      <section id="menu" ref={menuRef} className="container mx-auto px-4 py-8 sm:py-12 scroll-mt-20">
         <div className="text-center mb-8 sm:mb-12">
           <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-2 sm:mb-3">Our Menu</h3>
           <p className="text-xs sm:text-sm lg:text-base xl:text-lg px-4">All meats are halal certified and grilled fresh to order</p>
@@ -375,7 +376,7 @@ const SuyaWebApp = () => {
                   <select
                     value={quantities[item.id] || 1}
                     onChange={(e) => updateQuantity(item.id, parseInt(e.target.value))}
-                    className="border-2 border-gray-200 rounded-lg px-2 sm:px-3 py-2 text-xs sm:text-sm focus:outline-none focus:border-red-500 cursor-pointer"
+                    className="border-2 border-gray-200 rounded-lg px-2 sm:px-3 py-2 text-zinc-950 text-xs sm:text-sm focus:outline-none focus:border-red-500 cursor-pointer"
                   >
                     {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map(num => (
                       <option key={num} value={num}>Qty: {num}</option>
