@@ -66,7 +66,7 @@ const MenuCard = ({filtered}) => {
                         setSelectedMenus((prev) => {
                             const existing = prev.find((item) =>  item.name === name)
                             if(existing) {
-                                return prev.map((item) => item.name === name ? {...item, qty: item.qty + qty})
+                                return prev.map((item) => item.name === name ? {...item, qty: item.qty + qty} : item)
                             }
                             return [...prev,
                         { name, category, price, size, popular, description, image, qty }

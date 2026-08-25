@@ -4,7 +4,7 @@
 
         const encodedMessage = encodeURIComponent(message)
 
-        window.open(`https://wa.me/${phone}?text=${encodedMessage}, '_blank'`)
+        window.open(`https://wa.me/${phone}?text=${encodedMessage}`, '_blank')
     }
 
     
