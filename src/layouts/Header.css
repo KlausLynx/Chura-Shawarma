@@ -19,13 +19,16 @@
     border-radius: 50%;
     transition: transform 1s ease;
     transform: scale(0);
-    z-index: -1;
+    z-index: 899;
 }
 
 /* Orange button blobs */
 .gooey-button.bg-orange-400:before,
 .gooey-button.bg-orange-400:after {
-    background: rgb(251, 146, 60); /* orange-400 */
+    /* background: rgb(251, 146, 60); */
+    background: rgb(8, 184, 19);
+    
+    /* orange-400 */
 }
 
 /* Red button blobs */
