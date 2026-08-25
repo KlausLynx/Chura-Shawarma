@@ -1,102 +1,102 @@
 [
     {
         "id": 1,
-        "name": "Classic Beef Suya",
-        "category": "beef",
+        "name": "Classic Chicken Shawarma",
+        "category": "chicken",
         "price": 1500,
-        "description": "Tender beef strips marinated in authentic yaji spice blend, flame-grilled to perfection",
-        "size": "small",
+        "description": "Grilled marinated chicken strips wrapped in soft pita with garlic sauce, pickles, and fresh veggies",
+        "size": "regular",
         "popular": true,
-        "image": "https://images.unsplash.com/photo-1529692236671-f1f6cf9683ba?w=800&q=80"
+        "image": "https://images.unsplash.com/photo-1744534637339-4ecf53d1b800?w=800&q=80"
     },
     {
         "id": 2,
-        "name": "Spicy Chicken Suya",
-        "category": "chicken",
-        "price": 1200,
-        "description": "Juicy chicken thighs with extra hot pepper blend, grilled over open flame",
-        "size": "small",
+        "name": "Classic Beef Shawarma",
+        "category": "beef",
+        "price": 1700,
+        "description": "Thinly sliced seasoned beef, slow-roasted and wrapped with tahini, onions, and tomatoes",
+        "size": "regular",
         "popular": true,
-        "image": "https://images.unsplash.com/photo-1598103442097-8b74394b95c6?w=800&q=80"
+        "image": "https://images.unsplash.com/photo-1529006557810-274b9b2fc783?w=800&q=80"
     },
     {
         "id": 3,
-        "name": "Premium Goat Suya",
-        "category": "goat",
-        "price": 1800,
-        "description": "Traditional Nigerian favorite - succulent goat meat with aromatic spices",
-        "size": "small",
-        "popular": false,
-        "image": "https://images.unsplash.com/photo-1544025162-d76694265947?w=800&q=80"
+        "name": "Mixed Shawarma Wrap",
+        "category": "mixed",
+        "price": 1900,
+        "description": "The best of both worlds - chicken and beef combined in one loaded wrap with special sauce",
+        "size": "regular",
+        "popular": true,
+        "image": "https://images.unsplash.com/photo-1561620141-343a829938de?w=800&q=80"
     },
     {
         "id": 4,
-        "name": "Mixed Grill Combo",
-        "category": "combos",
-        "price": 2500,
-        "description": "Beef, chicken, and goat suya platter - perfect for sharing or solo feast",
-        "size": "medium",
+        "name": "Loaded Shawarma Platter",
+        "category": "platters",
+        "price": 3200,
+        "description": "Sliced shawarma meat served over rice or fries with salad, sauce, and toasted pita on the side",
+        "size": "large",
         "popular": true,
-        "image": "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=800&q=80"
+        "image": "https://images.unsplash.com/photo-1530469912745-a215c6b256ea?w=800&q=80"
     },
     {
         "id": 5,
-        "name": "Mild Beef Suya",
-        "category": "beef",
-        "price": 1500,
-        "description": "Perfect for beginners - all the flavor with gentle heat",
-        "size": "small",
-        "popular": false,
-        "image": "https://images.unsplash.com/photo-1558030006-450675393462?w=800&q=80"
-    },
-    {
-        "id": 6,
-        "name": "Extra Hot Chicken",
-        "category": "chicken",
-        "price": 2300,
-        "description": "For the heat seekers - loaded with scotch bonnet peppers",
-        "size": "medium",
-        "popular": false,
-        "image": "https://images.unsplash.com/photo-1562967914-608f82629710?w=800&q=80"
-    },
-    {
-        "id": 7,
-        "name": "Family Feast",
-        "category": "combos",
-        "price": 4500,
-        "description": "Feeds 4-6 people - assorted meats, sides, and extra suya spice",
+        "name": "Family Shawarma Feast",
+        "category": "platters",
+        "price": 6500,
+        "description": "Feeds 4-5 people - assorted chicken and beef shawarma, fries, salad, and extra sauces",
         "size": "large",
         "popular": true,
         "image": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=800&q=80"
     },
     {
+        "id": 6,
+        "name": "Spicy Chicken Shawarma",
+        "category": "chicken",
+        "price": 1600,
+        "description": "Extra hot pepper-spiced chicken shawarma for those who like it fiery",
+        "size": "regular",
+        "popular": false,
+        "image": "https://images.unsplash.com/photo-1744534637339-4ecf53d1b800?w=800&q=80"
+    },
+    {
+        "id": 7,
+        "name": "Mixed Grill Combo",
+        "category": "mixed",
+        "price": 3500,
+        "description": "Chicken and beef shawarma grilled together with peppers and onions, served on a sizzling board",
+        "size": "medium",
+        "popular": false,
+        "image": "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=800&q=80"
+    },
+    {
         "id": 8,
-        "name": "Fried Plantain",
+        "name": "Crispy Fries",
         "category": "sides",
-        "price": 5000,
-        "description": "Sweet ripe plantains fried to golden perfection",
-        "size": "large",
+        "price": 1200,
+        "description": "Golden, crispy fries seasoned with house spice blend",
+        "size": "regular",
         "popular": true,
         "image": "https://images.unsplash.com/photo-1725013936336-0121addb2c53?w=800&q=80"
     },
     {
         "id": 9,
-        "name": "Jollof Rice",
+        "name": "Fresh Garden Salad",
         "category": "sides",
-        "price": 3000,
-        "description": "Nigerian party rice - smoky, spicy, and incredibly flavorful",
-        "size": "medium",
-        "popular": true,
-        "image": "https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=800&q=80"
+        "price": 1500,
+        "description": "Cabbage, lettuce, tomatoes, onions, and cucumbers with house dressing",
+        "size": "regular",
+        "popular": false,
+        "image": "https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?w=800&q=80"
     },
     {
         "id": 10,
-        "name": "Fresh Garden Salad",
-        "category": "sides",
-        "price": 6000,
-        "description": "Cabbage, tomatoes, onions, and cucumbers with house dressing",
-        "size": "large",
-        "popular": false,
-        "image": "https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?w=800&q=80"
+        "name": "Garlic & Chili Sauce",
+        "category": "sauces",
+        "price": 500,
+        "description": "Creamy garlic sauce or fiery chili sauce - the perfect shawarma companion",
+        "size": "small",
+        "popular": true,
+        "image": "https://images.unsplash.com/photo-1519420638722-a2a5749c32be?w=800&q=80"
     }
 ]
