@@ -17,7 +17,7 @@ export const FindUs = () => {
                             <div className='w-full overflow-hidden rounded-xl'
                             style={{height: '560px'}} >
                                 <iframe 
-                                src="https://www.google.com/maps?q=Abakpa,Enugu,Nigeria&output=embed" 
+                                src="https://www.google.com/maps?q=6.4889046,7.5263501&z=18&output=embed"
                                 width="100%" 
                                 height="100%" 
                                 style={{ border: 0 }} 

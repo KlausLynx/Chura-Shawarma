@@ -1,6 +1,27 @@
 import { MessagesSquare } from "lucide-react"
+import { useState, useEffect } from "react"
 export const Footer = () => {
-    const date = new Date()
+    const [feedBackValue, setFeedBackValue] = useState('')
+    
+    useEffect(() => {
+        console.log(feedBackValue)
+    }, [feedBackValue])
+
+    const sendFeedback = async (e) => {
+        e.preventDefault()
+        const options = {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ feedback: feedBackValue })
+        }
+        await fetch('https://formspree.io/f/moeqwpok', options)
+
+        alert('Thank you for your feedback! We appreciate your input and will use it to improve our service.')
+
+        setFeedBackValue('') // Clear the textarea after submission
+    }
     return (
         <footer>
             <div className="pt-6">
@@ -19,16 +40,15 @@ export const Footer = () => {
                     </div>
 
                 <div >
-                    <form  >
-                        <textarea className="mb-3 border-2 rounded-md border-accent w-full border-dotted p-3 bg-amber-50" cols="30" placeholder="Share your thoughts, suggestions feedback...">
-
+                    <form onSubmit={sendFeedback}>
+                        <textarea className="mb-3 border-2 rounded-md border-accent w-full border-dotted p-3 bg-amber-50" cols="30" placeholder="Share your thoughts, suggestions feedback..." onChange={(e) => setFeedBackValue(e.target.value) }>
                         </textarea>
-                        <button className="bg-accent p-2 rounded-md" type="button">Send Feedback</button>
+                        <button className="bg-accent cursor-pointer p-2 rounded-md" type="submit">Send Feedback</button>
                     </form>
                 </div>
             <div></div>
             <div>
-                &copy; <span>{ date.getFullYear()}</span> Chura de Rama's Shawarma. All rights reserved. Made with ❤️ and 🌶️
+                &copy; <span>{ new Date().getFullYear()}</span> Chura de Rama's Shawarma. All rights reserved. Made with ❤️ and 🌶️
             </div>
             </div>
             </div>
