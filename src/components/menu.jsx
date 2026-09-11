@@ -22,8 +22,8 @@ export const Menu = () => {
     console.log(FILTERED_MENU)
 
     return (
-        <section className='bg-amber-100'>
-            <FilterBar category={categories} onSelect={handleMenu}/>
+        <section id='Menu' className='bg-amber-100 scroll-mt-10'>
+            <FilterBar category={categories} activeCategory={selectedCategory} onSelect={handleMenu}/>
             <div className='mt-10'>
                 <div >
                     <div className='text-center'>
