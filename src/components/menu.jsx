@@ -2,11 +2,17 @@ import { useEffect, useState } from 'react'
 import data from '../data/menu.json'
 import { FilterBar } from './FilterBar'
 import { ShoppingCart} from 'lucide-react'
-export const Menu = () => {
+export const Menu = ({ref, cartItem, onChange, setModalState, modalState}) => {
+    const [menuQuantity, setMenuQuantity] = useState({})
     const MENU_CATEGORY = data.map(menu => {
         console.log( menu)
         return menu.category
     })
+    useEffect(() => {
+        console.log(cartItem)
+    }, [cartItem])
+
+    // eslint-disable-next-line
     const [categories, setCategories] = useState(MENU_CATEGORY)
     console.log(categories)
 
@@ -22,7 +28,7 @@ export const Menu = () => {
     console.log(FILTERED_MENU)
 
     return (
-        <section id='Menu' className='bg-amber-100 scroll-mt-10'>
+        <section id='Menu' ref={ref} className='bg-amber-100 -scroll-mt-8'>
             <FilterBar category={categories} activeCategory={selectedCategory} onSelect={handleMenu}/>
             <div className='mt-10'>
                 <div >
@@ -32,7 +38,15 @@ export const Menu = () => {
                     </div>
                 </div>
                 <MenuGrid> 
-                    <MenuCard filtered={FILTERED_MENU}/>
+                    <MenuCard 
+                    filtered={FILTERED_MENU} 
+                    cartItems={cartItem} 
+                    setCartChange={onChange} 
+                    modal={modalState} 
+                    setModal={setModalState}
+                    menuQuantity={menuQuantity}
+                    setMenuQuantity={setMenuQuantity} 
+                    />
                 </MenuGrid>
             </div>
         </section>
@@ -47,30 +61,30 @@ const MenuGrid = ({children}) => {
     )
 }
 
-const MenuCard = ({filtered}) => {
-    const [menuQuantity, setMenuQuantity] = useState({})
-    const [selectedMenus, setSelectedMenus] = useState([])
-    
+const MenuCard = ({filtered, cartItems, setCartChange, setModal, modal, menuQuantity, setMenuQuantity}) => { 
     useEffect(()=> {
         console.log(menuQuantity)
-        console.log(selectedMenus)
-    },[menuQuantity, selectedMenus])
+        console.log(cartItems)
+    },[menuQuantity, cartItems])
 
     return (
-        <div className='grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-3 gap-6'>
+        <div className='grid grid-cols-1 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-4 gap-6'>
             {
                 filtered.map(({name, category, price, size, popular, description, image}) => {
 
                     const addToCart = () => {
                         let qty = menuQuantity[name] || 1
-                        setSelectedMenus((prev) => {
+                        setCartChange((prev) => {
                             const existing = prev.find((item) =>  item.name === name)
                             if(existing) {
                                 return prev.map((item) => item.name === name ? {...item, qty: item.qty + qty} : item)
                             }
                             return [...prev,
-                        { name, category, price, size, popular, description, image, qty }
-                        ]});
+                            { name, category, price, size, popular, description, image, qty }]
+                        });
+                        if(!modal) {
+                            setModal(true)
+                        }
                     }
 
                     const handleSelectedMenu = (e) => {
@@ -93,7 +107,7 @@ const MenuCard = ({filtered}) => {
                             </div>
                             <p>Size: {size}</p>
                             <p className='text-base text-text mb-3'>{description}</p>
-                            <div className='my-2 flex justify-between'>
+                            <div className='my-2 flex justify-between gap-3 '>
                                 <select className='
                                 border
                                 p-2
@@ -101,7 +115,8 @@ const MenuCard = ({filtered}) => {
                                 border-text
                                 focus:outline-none
                                 focus:border-amber-100
-                                cursor-pointer' 
+                                cursor-pointer
+                                md:w-24'
                                 onChange={handleSelectedMenu} 
                                 value={menuQuantity[name] || 1}
                                 >
@@ -120,16 +135,17 @@ const MenuCard = ({filtered}) => {
                                 className='bg-accent 
                                 cursor-pointer px-3 
                                 rounded-2xl w-7/12
+                                md:py-1
                                 hover:bg-amber-100
                                 hover:text-text
                                 flex
                                 items-center
                                 justify-center
-                                gap-4 
+                                gap-1
                                 '
                                 onClick={addToCart}
                                 >
-                                    <ShoppingCart/>
+                                    <ShoppingCart size={26}/>
                                     <span> Add to Cart</span>
                                 </button>
                             </div>

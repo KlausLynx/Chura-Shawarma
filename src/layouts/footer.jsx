@@ -25,7 +25,7 @@ export const Footer = () => {
     return (
         <footer>
             <div className="pt-6">
-                <div className="border-8 mx-3 border-text rounded-t-2xl opacity-80 "></div>
+                <div className="border-8 outline-0 mx-3 border-text rounded-t-2xl opacity-80 "></div>
                     <div className=" flex flex-col gap-4 max-w-2xl mt-3 mx-3 md:mx-auto p-3">
                         <div className="flex text-accent md:text-xl text-center m-3 justify-center gap-2">
                             <MessagesSquare/>

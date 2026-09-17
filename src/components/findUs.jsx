@@ -1,5 +1,6 @@
 import { MapPin, Clock, Phone } from 'lucide-react'
 import { quickOrderViaWhatsApp } from '../utils/helper'
+
 export const FindUs = () => {
 
     return (
@@ -57,7 +58,7 @@ export const FindUs = () => {
                                     </div>
                                 </div>
                             </div>
-                            <div>
+                            <div id='Order' className='scroll-mt-10'>
                                 <div className='flex items-start border-l-6 border-l-accent rounded-2xl p-3 gap-3 bg-amber-100
                                 '>
                                     <div className="bg-green-200 p-2 sm:p-3 rounded-full shrink-0">
@@ -67,7 +68,7 @@ export const FindUs = () => {
                                     <div>
                                         <p className='md:text-2xl font-medium mb-2'>Call or Text</p>
                                         <button className='cursor-pointer' onClick={quickOrderViaWhatsApp}>
-                                            <p className='md:text-xl font-light mb-2'>+(234) 706 717 9435</p>
+                                            <p className='md:text-xl font-light mb-2'>+(234) 810 364 0759</p>
                                             <p className='mb-2'>WhatsApp available</p>
                                         </button>
                                     </div>

@@ -7,7 +7,7 @@
         "description": "Grilled marinated chicken strips wrapped in soft pita with garlic sauce, pickles, and fresh veggies",
         "size": "regular",
         "popular": true,
-        "image": "https://images.unsplash.com/photo-1744534637339-4ecf53d1b800?w=800&q=80"
+        "image": "https://images.unsplash.com/photo-1744534637339-4ecf53d1b800?w=400&q=80"
     },
     {
         "id": 2,
@@ -17,7 +17,7 @@
         "description": "Thinly sliced seasoned beef, slow-roasted and wrapped with tahini, onions, and tomatoes",
         "size": "regular",
         "popular": true,
-        "image": "https://images.unsplash.com/photo-1529006557810-274b9b2fc783?w=800&q=80"
+        "image": "https://images.unsplash.com/photo-1529006557810-274b9b2fc783?w=400&q=80"
     },
     {
         "id": 3,
@@ -27,7 +27,7 @@
         "description": "The best of both worlds - chicken and beef combined in one loaded wrap with special sauce",
         "size": "regular",
         "popular": true,
-        "image": "https://images.unsplash.com/photo-1561620141-343a829938de?w=800&q=80"
+        "image": "https://images.unsplash.com/photo-1561620141-343a829938de?w=400&q=70"
     },
     {
         "id": 4,
@@ -37,7 +37,7 @@
         "description": "Sliced shawarma meat served over rice or fries with salad, sauce, and toasted pita on the side",
         "size": "large",
         "popular": true,
-        "image": "https://images.unsplash.com/photo-1530469912745-a215c6b256ea?w=800&q=80"
+        "image": "https://images.unsplash.com/photo-1530469912745-a215c6b256ea?w=400&q=80"
     },
     {
         "id": 5,
@@ -47,7 +47,7 @@
         "description": "Feeds 4-5 people - assorted chicken and beef shawarma, fries, salad, and extra sauces",
         "size": "large",
         "popular": true,
-        "image": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=800&q=80"
+        "image": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=400&q=80"
     },
     {
         "id": 6,
@@ -57,7 +57,7 @@
         "description": "Extra hot pepper-spiced chicken shawarma for those who like it fiery",
         "size": "regular",
         "popular": false,
-        "image": "https://images.unsplash.com/photo-1744534637339-4ecf53d1b800?w=800&q=80"
+        "image": "https://images.unsplash.com/photo-1744534637339-4ecf53d1b800?w=400&q=80"
     },
     {
         "id": 7,
@@ -67,7 +67,7 @@
         "description": "Chicken and beef shawarma grilled together with peppers and onions, served on a sizzling board",
         "size": "medium",
         "popular": false,
-        "image": "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=800&q=80"
+        "image": "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=400&q=80"
     },
     {
         "id": 8,
@@ -77,7 +77,7 @@
         "description": "Golden, crispy fries seasoned with house spice blend",
         "size": "regular",
         "popular": true,
-        "image": "https://images.unsplash.com/photo-1725013936336-0121addb2c53?w=800&q=80"
+        "image": "https://images.unsplash.com/photo-1725013936336-0121addb2c53?w=400&q=80"
     },
     {
         "id": 9,
@@ -87,7 +87,7 @@
         "description": "Cabbage, lettuce, tomatoes, onions, and cucumbers with house dressing",
         "size": "regular",
         "popular": false,
-        "image": "https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?w=800&q=80"
+        "image": "https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?w=400&q=80"
     },
     {
         "id": 10,
@@ -97,6 +97,6 @@
         "description": "Creamy garlic sauce or fiery chili sauce - the perfect shawarma companion",
         "size": "small",
         "popular": true,
-        "image": "https://images.unsplash.com/photo-1519420638722-a2a5749c32be?w=800&q=80"
+        "image": "https://images.unsplash.com/photo-1519420638722-a2a5749c32be?w=400&q=80"
     }
 ]

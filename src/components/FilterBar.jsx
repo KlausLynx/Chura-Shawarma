@@ -10,17 +10,20 @@ export const FilterBar = ({category, onSelect, activeCategory}) => {
     }, [activeCategory])
     
     return (
-        <div>
+        <div className="sticky top-0 z-10">
             <div className="bg-sec p-2 ">
-                <span>Filter by Categories:</span>
-                <ul className="mt-1 flex capitalize md:gap-3 text-text text-[13.5px] md:text-xl  cursor-pointer">
+                <span className="text-base md:text-xl">Filter:</span>
+                <ul className="mt-1 grid grid-cols-4 justify-items-center md:flex md:justify-center md:gap-3 capitalize text-text text-base md:text-xl cursor-pointer">
                     {uniqueCat.map(cat => (
-                        <li className={`hover:scale-75 ${activeCategory === cat ? 'bg-accent' : 'bg-none'} p-2 rounded-2xl`} key={cat} onClick={ () => onSelect(cat)}>
-                            {cat}
+                        <li
+                        className={`hover:scale-75 text-center ${activeCategory === cat ? 'bg-accent' : 'bg-none'} p-2 rounded-2xl`}
+                        key={cat}
+                        onClick={() => onSelect(cat)}
+                        >
+                        {cat}
                         </li>
                     ))}
                 </ul>
-                
             </div>
         </div>
     )

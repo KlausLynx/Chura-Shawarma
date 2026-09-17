@@ -1,9 +1,9 @@
 import { AnnouncementBar } from "./announcementBar";
-import logo from "../assets/suyaLogo.jpg"
+import Logo from '../assets/chura_logo.png'
 import './Header.css'
 import { NavBar } from "./Navbar";
 
-export const Header = () => {
+export const Header = ({scroll}) => {
     return (
         <header>
             {/* SVG Filter for gooey effect */}
@@ -20,13 +20,15 @@ export const Header = () => {
             <div className="bg-brand flex flex-col md:flex-row text-xs md:text-base justify-between p-6 ">
                 <div className="m-auto">
                     <figure>
-                        <img className=" rounded w-[clamp(6rem,10vw,12rem)] " src={logo} alt="shawarma Logo"  />
+                        <a href="/"><img className=" rounded w-[clamp(6rem,10vw,12rem)] " src={Logo} alt="shawarma Logo"  /></a>
                         <figcaption><em className="tracking-wide text-accent font-bold">Chura's Shawarama</em></figcaption>
                     </figure>
                 </div>
                 <div className="flex flex-col m-2 md:w-7/12">
                     <div className="gooey-wrapper flex flex-col items-center mb-3 justify-end">
-                        <button className="gooey-button bg-sec rounded-md cursor-pointer text-xs md:text-base text-text px-3 py-1.5 whitespace-nowrap w-50 ">See Menu & Order</button>
+                        <button onClick={scroll} className="gooey-button gooey-orange rounded-md cursor-pointer text-xs md:text-base whitespace-nowrap w-50">
+                            <span className="gooey-button-face bg-sec text-text rounded-md px-3 py-1.5">See Menu & Order</span>
+                        </button>
                     </div>
                     <div className="w-full border border-text"></div>
                     <NavBar/>

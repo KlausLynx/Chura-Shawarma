@@ -1,4 +1,4 @@
-import HeroImage from '../assets/beef-suya-roadside-night-1024x768.jpg'
+import HeroImage from '../assets/shawarma_hero.jpg'
 export const HeroSection = () => {
     return (
         <div>

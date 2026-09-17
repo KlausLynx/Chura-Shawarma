@@ -6,7 +6,15 @@
     position: relative;
     cursor: pointer;
     border: none;
-    /* Remove display: inline-block and min-width to let Tailwind handle it */
+    background: transparent;
+    z-index: 0;
+    display: inline-block;
+}
+
+.gooey-button-face {
+    position: relative;
+    z-index: 2;
+    display: inline-block;
 }
 
 .gooey-button:before,
@@ -19,22 +27,12 @@
     border-radius: 50%;
     transition: transform 1s ease;
     transform: scale(0);
-    z-index: 899;
+    z-index: 1;
 }
 
-/* Orange button blobs */
-.gooey-button.bg-orange-400:before,
-.gooey-button.bg-orange-400:after {
-    /* background: rgb(251, 146, 60); */
-    background: rgb(8, 184, 19);
-    
-    /* orange-400 */
-}
-
-/* Red button blobs */
-.gooey-button.bg-red-600:before,
-.gooey-button.bg-red-600:after {
-    background: rgb(220, 38, 38); /* red-600 */
+.gooey-button.gooey-orange:before,
+.gooey-button.gooey-orange:after {
+    background: #E85D04;;
 }
 
 .gooey-button:before {
