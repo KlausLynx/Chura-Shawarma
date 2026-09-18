@@ -1,4 +1,3 @@
-import { AnnouncementBar } from "./announcementBar";
 import Logo from '../assets/chura_logo.png'
 import './Header.css'
 import { NavBar } from "./Navbar";
