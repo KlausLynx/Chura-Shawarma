@@ -1,4 +1,4 @@
-import { AnnouncementBar } from "../layouts/announcementBar"
+import { AnnouncementBar } from "../layouts/AnnouncementBar"
 import { Header } from "../layouts/Header"
 import { Footer } from "../layouts/footer"
 import { About, CartModal, Contact, FindUs, HeroSection, Menu, ScrollToTop } from "../components"
