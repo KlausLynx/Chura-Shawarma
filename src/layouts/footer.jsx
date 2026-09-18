@@ -48,7 +48,7 @@ export const Footer = () => {
                 </div>
             <div></div>
             <div>
-                &copy; <span>{ new Date().getFullYear()}</span> Chura de Rama's Shawarma. All rights reserved. Made with ❤️ and 🌶️
+                &copy; <span>{ new Date().getFullYear()}</span> Chura de Rama's Shawarma. All rights reserved. Made with ❤️ and 🥩
             </div>
             </div>
             </div>
