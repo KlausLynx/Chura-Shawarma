@@ -93,19 +93,21 @@ const MenuCard = ({filtered, cartItems, setCartChange, setModal, modal, menuQuan
                     }
                     return (
                     <div key={name} className='shadow-lg overflow-hidden hover:shadow-brand transition transform hover:-translate-y-1 rounded-2xl bg-sec'>
-                        <div className="h-48 sm:h-56 lg:h-64 overflow-hidden bg-gradient-to-br from-orange-200 to-red-200">
+                        <div className="relative h-48 sm:h-56 lg:h-64 overflow-hidden bg-gradient-to-br from-orange-200 to-red-200">
                             <img 
                             src={image} 
                             alt={name}
                             className="w-full h-full object-cover hover:scale-110 transition duration-500"
                             />
+                            <span className='bg-accent p-2 rounded-sm absolute -left-1 top-3 z-20'>{size}</span>
                         </div>
+
                         <div className='p-6'>
                             <div className='flex justify-between mb-3'>
                                 <p className='text-base md:text-xl font-black text-text'>{name}</p>
                                 <p className='text-base md:text-xl font-black '>&#8358;{price}</p>
                             </div>
-                            <p>Size: {size}</p>
+                            {/* <p>Size: {size}</p> */}
                             <p className='text-base text-text mb-3'>{description}</p>
                             <div className='my-2 flex justify-between gap-3 '>
                                 <select className='
