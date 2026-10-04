@@ -10,7 +10,7 @@ export const FilterBar = ({category, onSelect, activeCategory}) => {
     }, [activeCategory])
     
     return (
-        <div className="sticky top-0 z-20">
+        <div className="sticky top-0 z-40">
             <div className="bg-sec p-2 ">
                 <span className="text-base md:text-xl">Filter:</span>
                 <ul className="mt-1 grid grid-cols-4 justify-items-center md:flex md:justify-center md:gap-3 capitalize text-text text-base md:text-xl cursor-pointer">
