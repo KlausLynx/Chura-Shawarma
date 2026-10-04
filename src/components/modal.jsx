@@ -19,12 +19,15 @@ export const CartModal = ({ scrolltomenu, isOpen, onView, cartItems, onChange })
     const sendOrderToWhatsapp = (cartItems)=> {
         const PHONE = import.meta.env.VITE_PHONE_NUMBER
         console.log(cartItems)
-        const messageArray = cartItems.map(cartItem => (
-            `${cartItem.qty}x  ${cartItem.name} - ${cartItem.price}`
-        ))
-        const orderTotal = cartItems.reduce((acc, run) => acc + run.qty * run.price, 0);
+        
+        const messageArray = cartItems.map(cartItem => {
+            const priceFormatted = cartItem.price.toLocaleString('en-NG', { style: 'currency', currency: 'NGN', minimumFractionDigits: 2, maximumFractionDigits: 2 });
+            return `${cartItem.qty}x  ${cartItem.name} - ${priceFormatted}`
+        });
+        const orderTotal = cartItems.reduce((acc, run) => acc + run.qty * run.price, 0)
+        const orderTotalFormatted = orderTotal.toLocaleString('en-NG', { style: 'currency', currency: 'NGN', minimumFractionDigits: 2, maximumFractionDigits: 2 });
         const messageText = messageArray.join('\n');
-        const message = `New Order🛒\n\n${messageText}\n\nTotal:${orderTotal}`;
+        const message = `New Order🛒\n\n${messageText}\n\nTotal:${orderTotalFormatted}`;
         console.log(message)
         const encodedMessage = encodeURIComponent(message);
         console.log(encodedMessage)
