@@ -125,7 +125,7 @@ export const CartModal = ({ scrolltomenu, isOpen, onView, cartItems, onChange })
             {
                 isOpen && (
                     <div className="fixed top-0 right-0 z-40 md:z-50 flex items-start justify-end p-4">
-                        <div className="bg-amber-100 rounded-lg p-4 sm:p-6 z-10 w-fit min-w-[16rem] max-w-[90vw] md:max-w-md max-h-[35vh] md:max-h-[28vh] flex flex-col">
+                        <div className="bg-amber-100 rounded-lg p-4 sm:p-6 z-10 w-fit min-w-[16rem] max-w-[90vw] md:max-w-md max-h-[35vh] md:max-h-[38vh] flex flex-col">
                             <div>
                                 <h2 className="text-base md:text-lg font-bold mb-4 flex items-center gap-2">
                                     <FaShoppingCart /> Cart Summary <span>({cartItems.length})</span>
